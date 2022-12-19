@@ -48,7 +48,7 @@
     <div class="jumbotron text-center">
       <img src="img/tiyo.jpg" alt="Tiyo" width="200px" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Sulistiyo Januar Akbar</h1>
-      <p class="lead">Student | Wota</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -68,10 +68,10 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
+          <div class="col-md-4" data-aos="fade-right" data-aos-duration="2000">
             <p>Halo, perkenalkan namaku Sulistiyo Januar Akbar, kalian bisa panggil aku tiyo, t i y o pake i ya, hehe. Aku tinggal di bekasi. Aku sekolah di SMK 11 Maret, dan aku mengambil jurusan TKJ (biar jadi hengker xD).</p>
           </div>
-          <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+          <div class="col-md-4" data-aos="fade-left" data-aos-duration="2000" data-aos-delay="200">
             <p>Selain jadi pelajar aku juga jadi wota(baru kenal jkt48 belom lama si ahahaaha). Oshi ku adalah mbak freya, si gadis koleris yang memiliki senyum karamel, kyaaaa >_<. Kurasa cukup sampai sini aja ya. Thanks you.</p>
           </div>
         </div>
@@ -185,6 +185,16 @@
       AOS.init({
         once: true,
       });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to(".lead", { duration: 2, delay: 1.5, text: "Student | Wota" });
+      gsap.from(".jumbotron img", { duration: 1, rotateY: 360, opacity: 0 });
+      gsap.from(".navbar", { duration: 1.5, y: "-100%", opacity: 0, ease: "bounce" });
+      gsap.from(".display-4", { duration: 1, x: -50, opacity: 0, ease: "back", delay: 0.5 });
     </script>
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
